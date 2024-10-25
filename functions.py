@@ -55,3 +55,45 @@ def greet_name_age(name: str, age: int) -> None:
 
 greet_name_age("Annie", 20)
 greet_name_age("Bob", 43)
+
+
+# Function - ARGS AND RETURN
+def math_operation(operand1: int, operand2: int, operation: str)-> float:
+    """
+    Returns the result of the specified operation based
+    on the two operands.
+
+    Args:
+        operand1 (int): The first operand.
+        operand2 (int): The second operand.
+        operand3 (str): The operation to perform, default = "+"
+    Returns:
+        Result (float): result of the specified operation on two operands.
+    Raises:
+        ValueError: "Invalid operation." When operation is not + or -.
+    """
+
+    if operation == "+":
+        result = operand1 + operand2
+    elif operation == "-":
+        result = operand1 - operand2
+    else:
+        raise ValueError("Invalid operation.")
+    
+    return result
+
+try:
+    print(math_operation(5,5,"*"))
+except ValueError as e:
+    print(e)
+
+try:
+    result = math_operation(1,5,"+")
+    print(result)
+except ValueError as e:
+    print("ERROR:", e)
+
+print(math_operation.__doc__)
+
+print(print.__doc__)
+print(input.__doc__)
