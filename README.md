@@ -4,7 +4,7 @@
 Introduction to Python Functions
 
 ## Author
-Student Name
+Anthony Gomes
 
 ## Demonstration Topics
 - Functions

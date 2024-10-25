@@ -102,3 +102,123 @@ print(math_operation.__doc__)
 
 print(print.__doc__)
 print(input.__doc__)
+
+
+
+
+
+# New Thing
+def display_person_info(name: str, age: int, city: str) -> None:
+    """Prints a person's information to the console.
+
+    Given a name, age, and city as arguments, this function prints a message to the console
+    describing the person's information.
+
+    Args:
+        name (str): The name of the person.
+        age (int): The age of the person.
+        city (str): The city where the person lives.
+
+    Returns:
+        None
+    """
+    print(f"{name} is {age} years old and lives in {city}.")
+
+display_person_info(name="Alice", city="New York", age=30)
+
+
+
+
+# New Thing
+def change_string(input_string: str) -> None:
+    """Modifies an input string by appending additional text.
+
+    Args:
+        input_string (str): The input string to be modified.
+
+    Returns:
+        None
+    """
+    input_string += " modified inside function"
+
+original_string = "Original string"
+change_string(original_string)
+print(original_string)  # Output: "Original string"
+
+
+
+# New Thing
+def my_function() -> None:
+    """Prints a local variable to the console.
+
+    This function creates a local variable called 'local_variable' 
+    and assigns it the value "I am a local variable". It then prints 
+    the value of 'local_variable' to the console.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    local_variable = "I am a local variable"
+    print(local_variable)
+
+my_function()
+# print(local_variable)  # This line would cause an error since local_variable is not defined outside the function
+
+
+
+# New Thing
+global_variable = "I am a global variable"
+
+def my_function() -> None:
+    """Prints a global variable to the console, and modifies it within 
+    the function.
+
+    This function prints the value of the global variable 
+    'global_variable' to the console. It then modifies the value 
+    of 'global_variable' to "I have been modified" using the 
+    'global' keyword.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+
+    # To modify the global variable within the function
+    global global_variable
+    print(global_variable)
+    global_variable = "I have been modified"
+    print(global_variable)
+
+my_function()
+print(global_variable)
+
+
+# New Thing
+demo_var = 10  # This is a global variable
+
+def my_function() -> None:
+    """Prints a local variable with the same name as a global variable.
+
+    This function creates a local variable called 'demo_var' and 
+    assigns it the value 5. It then prints the value of 'demo_var' to the console.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
+    demo_var = 5  # This is a local variable with the same name as the global variable
+    print(f"Local demo_var: {demo_var}")
+
+my_function()
+print(f"Global demo_var: {demo_var}")
+
+# Output:
+# Local demo_var: 5
+# Global demo_var: 10
