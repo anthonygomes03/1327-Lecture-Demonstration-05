@@ -58,7 +58,7 @@ greet_name_age("Bob", 43)
 
 
 # Function - ARGS AND RETURN
-def math_operation(operand1: int, operand2: int, operation: str)-> float:
+def math_operation(operand1: int, operand2: int, operation: str = "+")-> float:
     """
     Returns the result of the specified operation based
     on the two operands.
@@ -81,6 +81,11 @@ def math_operation(operand1: int, operand2: int, operation: str)-> float:
         raise ValueError("Invalid operation.")
     
     return result
+
+try:
+    print(math_operation(5,5,))
+except ValueError as e:
+    print(e)
 
 try:
     print(math_operation(5,5,"*"))
